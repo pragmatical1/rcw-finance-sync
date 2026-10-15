@@ -22,8 +22,9 @@
   <h2>Information the App accesses</h2>
   <p>With QuickBooks <strong>accounting</strong> access, the App reads and writes accounting data in Rock Creek
     Wellness's own QuickBooks Online company: the chart of accounts, products and services, payment methods,
-    sales transactions, and financial reports. The App does not access QuickBooks Payments, payroll, bank
-    logins, or any other company's data.</p>
+    sales transactions, and financial reports. When the App is connected, Intuit gives it the company's ID and
+    access tokens, which it stores as described below. The App does not access QuickBooks Payments, payroll,
+    bank logins, or any other company's data.</p>
 
   <h2>How it is used</h2>
   <p>Only to record and reconcile the clinic's own daily sales and to produce internal financial reports for
@@ -36,10 +37,15 @@
   <h2>Where it is stored and how it is protected</h2>
   <ul>
     <li>Data is kept on computers and secure services controlled by Rock Creek Wellness.</li>
-    <li>QuickBooks credentials and access tokens are encrypted by the computer's operating-system credential
-      store and are never kept in plain text.</li>
+    <li>The App never sees or stores anyone's QuickBooks sign-in password. Its app keys and access tokens are
+      encrypted in the computer's operating-system credential store and are never kept in plain text.</li>
+    <li>Data moves between the App and QuickBooks only over encrypted (HTTPS) connections.</li>
     <li>Access is limited to staff Rock Creek Wellness authorizes.</li>
   </ul>
+
+  <h2>Security incidents</h2>
+  <p>If we learn that information obtained through the App was accessed without authorization, we will act to
+    contain it and will notify affected parties and Intuit as required by law and by Intuit's terms.</p>
 
   <h2>Sharing</h2>
   <p>We do not sell this information, share it for advertising, or give it to third parties for their own use.
