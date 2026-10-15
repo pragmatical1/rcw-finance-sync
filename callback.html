@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Finishing sign-in · RCW Finance Sync</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">RCW Finance Sync</div>
+  <h1>Finishing sign-in…</h1>
+</header>
+<main>
+  <p id="status">Handing your Intuit sign-in to RCW Finance Sync on this computer.</p>
+  <p class="muted">If nothing happens within a few seconds, the RCW Finance Sync helper isn't running on this
+    computer. Close this tab and start the connection again from the clinic's computer.</p>
+</main>
+<script>
+  // Intuit sends the sign-in result to this https page (Intuit requires https for live companies).
+  // Forward it unchanged to the RCW Finance Sync helper listening on this same computer.
+  // This page loads nothing from other sites and stores nothing.
+  if (location.search) {
+    location.replace("http://localhost:8765/callback" + location.search);
+  } else {
+    document.getElementById("status").textContent = "No sign-in information was received.";
+  }
+</script>
+</body>
+</html>
